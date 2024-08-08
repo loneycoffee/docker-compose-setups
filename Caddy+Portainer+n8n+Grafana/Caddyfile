@@ -1,0 +1,17 @@
+portainer.{$DOMAIN} {
+  reverse_proxy https://portainer:9443 {
+    transport http {
+      tls_insecure_skip_verify
+    }
+  }
+}
+
+n8n.{$DOMAIN} {
+  reverse_proxy http://n8n:5678  # Changed to http assuming no TLS setup
+}
+
+grafana.{$DOMAIN}
+  reverse_proxy http://grafana:3000  # Changed to http assuming no TLS setup
+}
+
+
