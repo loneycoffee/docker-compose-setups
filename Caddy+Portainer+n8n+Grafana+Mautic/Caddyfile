@@ -15,7 +15,7 @@ grafana.{$DOMAIN} {
 }
 
 mautic.{$DOMAIN} {
-  reverse_proxy http://mautic_web:8001  # Changed to http assuming no TLS setup
+  reverse_proxy http://mautic_web:80  # Changed to http assuming no TLS setup
 }
 
 
