@@ -10,8 +10,13 @@ n8n.{$DOMAIN} {
   reverse_proxy http://n8n:5678  # Changed to http assuming no TLS setup
 }
 
-grafana.{$DOMAIN}{
+grafana.{$DOMAIN} {
   reverse_proxy http://grafana:3000  # Changed to http assuming no TLS setup
 }
+
+mautic.{$DOMAIN} {
+  reverse_proxy http://mautic_web:8001  # Changed to http assuming no TLS setup
+}
+
 
 
